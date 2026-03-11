@@ -66,3 +66,48 @@ track.addEventListener('touchend', e => {
         resetAuto();
     }
 });
+
+/* ── Project Card Modals ── */
+function openModal(id) {
+    const overlay = document.getElementById(id);
+    if (!overlay) return;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(overlay) {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+// Open modal on card click (but not when clicking the "View Project" link)
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', e => {
+        // Don't open modal if the user clicked the external link
+        if (e.target.closest('.project-link')) return;
+        const modalId = card.dataset.modal;
+        if (modalId) openModal(modalId);
+    });
+});
+
+// Close on ✕ button click
+document.querySelectorAll('.modal-close').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const overlay = btn.closest('.modal-overlay');
+        closeModal(overlay);
+    });
+});
+
+// Close on overlay backdrop click
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', e => {
+        if (e.target === overlay) closeModal(overlay);
+    });
+});
+
+// Close on Escape key
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.open').forEach(closeModal);
+    }
+});
