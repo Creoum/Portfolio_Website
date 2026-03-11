@@ -7,15 +7,14 @@
     <title>Aaron Flores - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,
-    400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Nunito:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Nunito:wght@300;400;600&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <div class="logo">Aaron Flores</div>
+        <div class="logo">Aaron <span>Flores</span></div>
         <nav>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
@@ -26,7 +25,7 @@
 
     <section class="hero">
         <p class="hero-tag">Web Developer &amp; IT Student</p>
-        <h1>Hi, I'm Aaron!</h1>
+        <h1>Hi, I'm <em>Aaron.</em></h1>
         <p class="hero-sub">
             Aspiring developer · Western Mindanao State University Information Technology Student.
         </p>
@@ -37,20 +36,23 @@
     </section>
 
     <section id="about" class="section">
-        <p class="section-label">01 - About</p>
-        <h2 class="section-title">A little about me</h2>
+        <p class="section-label">01 — About</p>
+        <h2 class="section-title">A little about <em>me</em></h2>
         <div class="divider"></div>
-        <p class="about-body">
-            Hi, I am Aaron Jess Flores. I am an Information Technology student at Western Mindanao State University
-            with a deep passion for software development. I am driven by the challenge of creating innovative solutions
-            that make a real difference, and I am always looking for opportunities to build and grow within the tech
-            industry.
-        </p>
+        <div class="about-layout">
+            <img src="images/me.jpg" alt="Aaron Flores" class="about-photo" />
+            <p class="about-body">
+                Hi, I am Aaron Jess Flores. I am an Information Technology student at Western Mindanao State University
+                with a deep passion for software development. I am driven by the challenge of creating innovative
+                solutions that make a real difference, and I am always looking for opportunities to build and grow
+                within the tech industry.
+            </p>
+        </div>
     </section>
 
     <section id="skills" class="section">
-        <p class="section-label">02 - Skills</p>
-        <h2 class="section-title">Skills & Technologies I work with</h2>
+        <p class="section-label">02 — Skills</p>
+        <h2 class="section-title">Skills &amp; Technologies I <em>work with</em></h2>
         <div class="divider"></div>
         <div class="skills-grid">
             <span class="skill-tag">JavaScript</span>
@@ -64,15 +66,14 @@
 
     <section id="projects" class="section">
         <div class="inner">
-            <p class="section-label">03 - Projects</p>
-            <h2 class="section-title">My Projects</h2>
+            <p class="section-label">03 — Projects</p>
+            <h2 class="section-title">My <em>Projects</em></h2>
             <div class="divider"></div>
         </div>
 
         <div class="slideshow-wrapper">
-            <div class="slide-track" id="slidesTrack">
+            <div class="slides-track" id="slidesTrack">
 
-                <!-- For me to remember: Slide to siya yung mismong box sa presentation -->
                 <div class="slide">
                     <div class="project-card">
                         <span class="project-num">01</span>
@@ -83,12 +84,12 @@
                             for Zamboanga City. Processes live footage to deliver real-time insights and help optimize
                             urban traffic flow.
                         </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="project-tags">Computer Vision</span>
-                        <span class="project-tags">Python</span>
-                        <span class="project-tags">Data Analysis</span>
-                        <span class="project-tags">Smart City</span>
+                        <div class="project-tags">
+                            <span class="project-tag">Computer Vision</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Data Analysis</span>
+                            <span class="project-tag">Smart City</span>
+                        </div>
                     </div>
                 </div>
 
@@ -101,18 +102,18 @@
                             A personal portfolio website built using HTML, CSS, and JavaScript. Showcases my skills,
                             projects, and contact information in a clean and responsive design for Electives 4 course.
                         </p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="project-tags">HTML</span>
-                        <span class="project-tags">CSS</span>
-                        <span class="project-tags">JavaScript</span>
-                        <span class="project-tags">Responsive Design</span>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Responsive Design</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
-        <!--Slide control nang slideshow-->
         <div class="slide-controls">
             <div class="slide-dots" id="slideDots"></div>
             <div class="slide-arrows">
@@ -124,15 +125,15 @@
     </section>
 
     <section id="contact" class="section">
-        <p class="section-label">04 - Contact</p>
-        <h2 class="section-title">Let's Connect!</h2>
+        <p class="section-label">04 — Contact</p>
+        <h2 class="section-title">Let's <em>Connect!</em></h2>
         <div class="divider"></div>
         <div class="contact-links">
             <a href="mailto:flores.aaronjess@gmail.com" class="contact-link">
                 <span class="contact-icon">✉</span>
                 flores.aaronjess@gmail.com
             </a>
-            <a href="https://github.com/Creoum" class="contact-link">
+            <a href="https://github.com/Creoum" target="_blank" class="contact-link">
                 <span class="contact-icon">⌥</span>
                 github.com/Creoum
             </a>
@@ -141,6 +142,7 @@
 
     <footer>
         <p>© 2026 Aaron Flores</p>
+        <p>Built with care &amp; matcha.</p>
     </footer>
 
     <script src="script.js"></script>

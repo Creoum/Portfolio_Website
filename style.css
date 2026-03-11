@@ -32,7 +32,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ── Noise texture overlay ── */
 body::before {
     content: '';
     position: fixed;
@@ -602,5 +601,48 @@ footer p {
         padding: 24px 20px;
         flex-direction: column;
         gap: 8px;
+    }
+}
+
+.about-layout {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.about-photo {
+    width: 220px;
+    height: 270px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 12px;
+    border: 1px solid rgba(200, 213, 185, 0.15);
+    box-shadow: 0 16px 48px rgba(42, 33, 24, 0.45);
+    flex-shrink: 0;
+    filter: saturate(0.85);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.about-photo:hover {
+    filter: saturate(1);
+    transform: translateY(-4px);
+}
+
+/* Override .about-body max-width inside the flex layout */
+.about-layout .about-body {
+    max-width: 480px;
+}
+
+@media (max-width: 680px) {
+    .about-layout {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+    }
+
+    .about-photo {
+        width: 100%;
+        height: 260px;
     }
 }
