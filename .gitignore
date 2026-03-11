@@ -1,0 +1,51 @@
+# ── OS Files ──────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Editor & IDE ──────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# ── Logs & Debug ──────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── Dependencies ──────────────────────────
+node_modules/
+bower_components/
+
+# ── Environment & Secrets ─────────────────
+.env
+.env.local
+.env.development
+.env.production
+*.pem
+*.key
+
+# ── Build Output ──────────────────────────
+/dist
+/build
+/.cache
+
+# ── Personal / Private Assets ─────────────
+# Uncomment the line below if you don't want
+# to upload your personal photo to GitHub
+# images/me.jpg
+
+# ── Temp Files ────────────────────────────
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
