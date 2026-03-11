@@ -4,79 +4,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aaron Flores Portfolio</title>
+    <title>Aaron Flores - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,
+    400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Nunito:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <h1>Aaron Flores Portfolio</h1>
+        <div class="logo">Aaron Flores</div>
         <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h2>Hi! My name is Aaron!</h2>
-        <p>
-            An aspiring and passionate web developer.
+        <p class="hero-tag">Web Developer &amp; IT Student</p>
+        <h1>Hi, I'm Aaron!</h1>
+        <p class="hero-sub">
+            Aspiring developer · Western Mindanao State University Information Technology Student.
         </p>
+        <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View My Works</a>
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
     </section>
 
     <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>
-            Motivated undergraduate Information Technology student at WMSU
-            aspiring to build innovative and impactful software solutions.
+        <p class="section-label">01 - About</p>
+        <h2 class="section-title">A little about me</h2>
+        <div class="divider"></div>
+        <p class="about-body">
+            Hi, I am Aaron Jess Flores. I am an Information Technology student at Western Mindanao State University
+            with a deep passion for software development. I am driven by the challenge of creating innovative solutions
+            that make a real difference, and I am always looking for opportunities to build and grow within the tech
+            industry.
         </p>
     </section>
 
     <section id="skills" class="section">
-        <h2>Skills / Technologies</h2>
-        <ul>
-            <li>Programming Languages: JavaScript, Python, HTML, CSS, Python, Git</li>
-            <li>Frameworks: React, Django</li>
-            <li>Version Control: Git, GitHub</li>
-        </ul>
+        <p class="section-label">02 - Skills</p>
+        <h2 class="section-title">Skills & Technologies I work with</h2>
+        <div class="divider"></div>
+        <div class="skills-grid">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag mocha-tag">Git</span>
+            <span class="skill-tag mocha-tag">GitHub</span>
+        </div>
     </section>
 
-    <section>
-
-        <h2>Projects</h2>
-
-        <div class="project-card">
-            <h3>Project 1: Trapick</h3>
-            <p>Camera-Based Traffic Data Analysis System for Smart Traffic
-                Management Solution in Zamboanga City.</p>
+    <section id="projects" class="section">
+        <div class="inner">
+            <p class="section-label">03 - Projects</p>
+            <h2 class="section-title">My Projects</h2>
+            <div class="divider"></div>
         </div>
 
-        <div class="project-card">
-            <h3>Project 2: Personal Blog/Portfolio</h3>
-            <p>A personal blog and portfolio website built with HTML, CSS, and JavaScript.
-                That was made for to showcase my projects in electives 4.
-            </p>
+        <div class="slideshow-wrapper">
+            <div class="slide-track" id="slidesTrack">
+
+                <!-- For me to remember: Slide to siya yung mismong box sa presentation -->
+                <div class="slide">
+                    <div class="project-card">
+                        <span class="project-num">01</span>
+                        <p class="project-type">System &amp; Analysis</p>
+                        <h3 class="project-title">Trapick</h3>
+                        <p class="project-desc">
+                            A camera-based traffic data analysis system designed as a smart traffic management solution
+                            for Zamboanga City. Processes live footage to deliver real-time insights and help optimize
+                            urban traffic flow.
+                        </p>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tags">Computer Vision</span>
+                        <span class="project-tags">Python</span>
+                        <span class="project-tags">Data Analysis</span>
+                        <span class="project-tags">Smart City</span>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="project-card">
+                        <span class="project-num">02</span>
+                        <p class="project-type">Web Development</p>
+                        <h3 class="project-title">Personal Resume</h3>
+                        <p class="project-desc">
+                            A personal portfolio website built using HTML, CSS, and JavaScript. Showcases my skills,
+                            projects, and contact information in a clean and responsive design for Electives 4 course.
+                        </p>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tags">HTML</span>
+                        <span class="project-tags">CSS</span>
+                        <span class="project-tags">JavaScript</span>
+                        <span class="project-tags">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Slide control nang slideshow-->
+        <div class="slide-controls">
+            <div class="slide-dots" id="slideDots"></div>
+            <div class="slide-arrows">
+                <button class="arrow-btn" id="prevBtn" aria-label="Previous project">&#8592;</button>
+                <button class="arrow-btn" id="nextBtn" aria-label="Next project">&#8594;</button>
+            </div>
         </div>
 
     </section>
 
     <section id="contact" class="section">
-
-        <h2>Contact</h2>
-
-        <p>
-            Email: flores.aaronjess@gmail.com <a href="mailto:flores.aaronjess@gmail.com">Email Me!</a>
-        </p>
-        <p>
-            Github: <a href="https://github.com/Creoum">GitHub Profile</a>
-        </p>
-        <p>
-            LinkedIn: <a href="https://www.linkedin.com/in/aaron-jess-flores-3383b93b0/">LinkedIn Profile</a>
-        </p>
+        <p class="section-label">04 - Contact</p>
+        <h2 class="section-title">Let's Connect!</h2>
+        <div class="divider"></div>
+        <div class="contact-links">
+            <a href="mailto:flores.aaronjess@gmail.com" class="contact-link">
+                <span class="contact-icon">✉</span>
+                flores.aaronjess@gmail.com
+            </a>
+            <a href="https://github.com/Creoum" class="contact-link">
+                <span class="contact-icon">⌥</span>
+                github.com/Creoum
+            </a>
+        </div>
     </section>
 
     <footer>
@@ -84,7 +144,6 @@
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
