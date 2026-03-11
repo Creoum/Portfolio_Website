@@ -890,6 +890,57 @@ nav a:hover::after {
     position: relative;
 }
 
+/* ── In Progress styles ── */
+.in-progress-tag {
+    background: rgba(160, 112, 90, 0.15);
+    color: var(--mocha-pale);
+    border-color: rgba(160, 112, 90, 0.3);
+}
+
+.in-progress-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    color: var(--mocha-pale);
+    opacity: 0.8;
+}
+
+.project-link--disabled {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background: rgba(107, 76, 59, 0.12);
+    color: var(--mocha-pale);
+    border: 1px solid rgba(160, 112, 90, 0.25);
+    opacity: 0.7;
+    cursor: default;
+}
+
+.modal-cta--disabled {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    border-radius: 8px;
+    background: rgba(107, 76, 59, 0.1);
+    color: var(--mocha-pale);
+    border: 1px dashed rgba(160, 112, 90, 0.3);
+    opacity: 0.6;
+    cursor: default;
+    width: 100%;
+}
+
+/* Solo badge */
 .solo-badge {
     font-family: 'DM Mono', monospace;
     font-size: 0.58rem;
@@ -938,6 +989,19 @@ nav a:hover::after {
 
 .contact-icon {
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-icon svg {
+    display: block;
+    transition: transform 0.25s ease;
+}
+
+.contact-link:hover .contact-icon svg {
+    transform: scale(1.15);
 }
 
 footer {
@@ -985,10 +1049,71 @@ footer p {
     max-width: 480px;
 }
 
-/* ── Responsive ── */
+/* ══════════════════════════════════════════
+   RESPONSIVE — Tablet (max 768px)
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+    header {
+        padding: 16px 28px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 0.68rem;
+    }
+
+    .section {
+        padding: 80px 32px;
+    }
+
+    #projects .inner {
+        padding: 0 32px;
+    }
+
+    .slide {
+        padding: 0 32px;
+    }
+
+    .project-card {
+        padding: 36px 32px 28px;
+    }
+
+    .slide-controls {
+        padding: 20px 32px 0;
+    }
+
+    .about-layout {
+        gap: 32px;
+    }
+
+    .modal {
+        padding: 40px 32px 36px;
+        max-width: 95vw;
+    }
+
+    .modal-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-link {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — Mobile (max 680px)
+══════════════════════════════════════════ */
 @media (max-width: 680px) {
     header {
-        padding: 16px 20px;
+        padding: 14px 18px;
     }
 
     .logo {
@@ -996,65 +1121,186 @@ footer p {
     }
 
     nav {
-        gap: 18px;
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 0.65rem;
+        letter-spacing: 0.08em;
     }
 
     .section {
-        padding: 70px 24px;
+        padding: 70px 20px;
+    }
+
+    #projects {
+        padding: 70px 0;
     }
 
     #projects .inner {
-        padding: 0 24px;
+        padding: 0 20px;
     }
 
     .slide {
-        padding: 0 24px;
+        padding: 0 20px;
     }
 
     .project-card {
-        padding: 32px 28px 28px;
+        padding: 28px 22px 24px;
+    }
+
+    .project-title {
+        font-size: 1.6rem;
+    }
+
+    .project-desc {
+        font-size: 0.88rem;
     }
 
     .slide-controls {
-        padding: 20px 24px 0;
+        padding: 18px 20px 0;
+    }
+
+    .project-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .project-link,
+    .project-link--disabled {
+        width: 100%;
+        justify-content: center;
     }
 
     footer {
         padding: 24px 20px;
         flex-direction: column;
         gap: 8px;
+        text-align: center;
     }
 
     .about-layout {
         flex-direction: column;
         align-items: flex-start;
-        gap: 28px;
+        gap: 24px;
     }
 
     .about-photo {
         width: 100%;
-        height: 260px;
+        height: 240px;
+    }
+
+    .skills-grid {
+        gap: 8px;
+    }
+
+    .skill-tag {
+        font-size: 0.68rem;
+        padding: 7px 14px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-link {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.72rem;
+    }
+
+    /* Modal */
+    .modal-overlay {
+        padding: 16px;
+        align-items: flex-end;
     }
 
     .modal {
-        padding: 36px 24px 32px;
+        padding: 32px 20px 28px;
+        border-radius: 16px 16px 12px 12px;
+        max-height: 92vh;
     }
 
     .modal-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .modal-gallery {
         grid-template-columns: 1fr;
     }
 
-    .project-footer {
-        flex-direction: column;
-        align-items: flex-start;
+    .modal-img {
+        height: 180px;
     }
 
-    .project-link {
+    .modal-collaborators {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .collaborator {
         width: 100%;
-        justify-content: center;
+    }
+
+    .modal-tags {
+        gap: 6px;
+    }
+
+    .modal-tag {
+        font-size: 0.63rem;
+        padding: 5px 10px;
+    }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — Small phones (max 380px)
+══════════════════════════════════════════ */
+@media (max-width: 380px) {
+    header {
+        padding: 12px 14px;
+    }
+
+    .logo {
+        font-size: 0.9rem;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 0.6rem;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-sub {
+        font-size: 0.88rem;
+    }
+
+    .btn {
+        font-size: 0.65rem;
+        padding: 10px 20px;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .project-title {
+        font-size: 1.4rem;
+    }
+
+    .modal-title {
+        font-size: 1.4rem;
+    }
+
+    .collaborator-avatar {
+        width: 28px;
+        height: 28px;
+        font-size: 0.58rem;
     }
 }
